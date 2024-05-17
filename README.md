@@ -1,4 +1,4 @@
-This repository contains all projects from different coursed at VUT MIT NSEC
+This repository contains all projects from different coursed at FIT VUT MIT NSEC
 
 ### First semester
 | **Course** | **Project** | **Results** |                                 **Description**                                 |
