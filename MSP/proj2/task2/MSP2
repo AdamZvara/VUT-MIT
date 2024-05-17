@@ -1,0 +1,6 @@
+závislosť prediktorov (jednotlivé stĺpce vo vstupe)
+rovnaká mierka prediktorov (normalizácia)
+významnosť jednotlivých prediktorov (F-testy celého modelu alebo jednotlivých prediktorov)
+spojité vs kategoriálne premenné 
+kontrola outlier hodnôt - leverage
+diagnostické modely

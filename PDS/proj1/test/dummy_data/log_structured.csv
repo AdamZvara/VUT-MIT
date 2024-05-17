@@ -1,0 +1,37 @@
+Id, Date,   Time,   Content,                                                  EventId, EventTemplate
+1,  081109, 190000, Receiving block blk_-1608999687919862906,                 E5,      Receiving block <*>
+2,  081109, 190518, BLOCK* NameSystem.allocateBlock:blk_-1608999687919862906, E22,     BLOCK* NameSystem.allocateBlock:<*>
+3,  081109, 190813, Receiving block blk_-3544583377289625738,                 E5,      Receiving block <*>
+4,  081109, 191423, Receiving block blk_-3544583377289625738,                 E5,      Receiving block <*>
+5,  081109, 192341, block blk_-1608999687919862906 terminating,               E11,     block <*> terminating
+6,  081109, 193141, block blk_-3544583377289625738 terminating,               E11,     block <*> terminating
+7,  081109, 200019, Received block blk_-9073992586687739851 of size 91178,    E9,      Received block <*> of size <*>
+8,  081109, 201019, Received block blk_-1608999687919862906 of size 91178,    E9,      Received block <*> of size <*> 
+9,  081109, 201019, block blk_-1608999687919862906 terminating,               E11,     block <*> terminating
+10, 081109, 201019, Received block blk_-9073992586687739851 of size 91178,    E9,      Received block <*> of size <*>
+11, 081109, 201319, is added to blk_-8531310335568756456 size 91178,          E26,     is added to <*> size <*>
+12, 081109, 202319, is added to blk_-1608999687919862906 size 91178,          E26,     is added to <*> size <*>
+13, 081109, 203419, is added to blk_-1608999687919862906 size 91178,          E26,     is added to <*> size <*>
+14, 081109, 204621, block blk_7503483334202473044 terminating,                E11,     block <*> terminating
+15, 081109, 205621, Received block blk_7503483334202473044 of size 233217,    E9,      Received block <*> of size <*> 
+16, 081109, 211521, block blk_7503483334202473044 terminating,                E11,     block <*> terminating
+17, 081109, 211521, Received block blk_-8531310335568756456 of size 233217,   E9,      Received block <*> of size <*> 
+18, 081109, 211521, Transmitted block blk_-1608999687919862906,               E16,     Transmitted block <*>
+19, 081109, 211521, Receiving block blk_-9073992586687739851,                 E5,      Receiving block <*>
+20, 081109, 211521, block blk_7503483334202473044 terminating,                E11,     block <*> terminating
+21, 081109, 212521, Received block blk_7503483334202473044 of size 233217,    E9,  Received block <*> of size <*> from /<*>
+13, 081109, 212519, is added to blk_-8531310335568756456 size 91178,          E26,     is added to <*> size <*>
+14, 081109, 212521, block blk_7503483334202473044 terminating,                E11,     block <*> terminating
+15, 081109, 212521, Received block blk_7503483334202473044 of size 233217,    E9,      Received block <*> of size <*> 
+16, 081109, 212521, block blk_7503483334202473044 terminating,                E11,     block <*> terminating
+17, 081109, 213521, Received block blk_7503483334202473044 of size 233217,    E9,      Received block <*> of size <*> 
+18, 081109, 213521, Transmitted block blk_-1608999687919862906,               E16,     Transmitted block <*>
+19, 081109, 220121, Receiving block blk_-3544583377289625738,                 E5,      Receiving block <*>
+20, 081109, 220121, block blk_7503483334202473044 terminating,                E11,     block <*> terminating
+21, 081109, 220521, Received block blk_7503483334202473044 of size 233217,    E9,  Received block <*> of size <*> from /<*>
+22, 081109, 223521, Received block blk_-8531310335568756456 src: /10.250.14.224:35754 dest: /10.250.14.224:50010, E6, Received block <*> src: /<*> dest: /<*>
+22, 081109, 223521, Received block blk_-3544583377289625738 src: /10.250.14.224:35754 dest: /10.250.14.224:50010, E6, Received block <*> src: /<*> dest: /<*>
+22, 081109, 223521, Received block blk_-1608999687919862906 src: /10.250.14.224:35754 dest: /10.250.14.224:50010, E6, Received block <*> src: /<*> dest: /<*>
+22, 081109, 224321, Received block blk_-1608999687919862906 src: /10.250.14.224:35754 dest: /10.250.14.224:50010, E6, Received block <*> src: /<*> dest: /<*>
+22, 081109, 224321, Received block blk_-9073992586687739851 src: /10.250.14.224:35754 dest: /10.250.14.224:50010, E6, Received block <*> src: /<*> dest: /<*>
+22, 081109, 225121, Received block blk_-9073992586687739851 src: /10.250.14.224:35754 dest: /10.250.14.224:50010, E6, Received block <*> src: /<*> dest: /<*>

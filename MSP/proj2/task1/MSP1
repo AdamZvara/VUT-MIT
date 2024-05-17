@@ -1,0 +1,34 @@
+1a1) 
+    povedz si, že apriorna pravdepodobnosť bude mať gamma rozloženie (parametre alfa a beta vieš odhadnúť z tej stránky čo je v zadaní - \alpha total occurrences in \beta intervals) 
+        to alfa a beta vieš získať z "každých 5 ms by mělo nastat 10 připojení"
+    potom vieš namodelovať apriornu hustotu cez gamma.pdf()
+    aposteriorna bude rovnaká, len zmeníš to ako počítaš alfa a beta podľa stĺpca "Posterior hyperparameters" v tej wiki
+
+1a2)
+    aposteriorna pravdepodobnosť je daná priamo v tabuľke v poslednom stlpci .. bude to negative binomial distribution - diskrétne
+        vytvor si diskrétny priestor x = np.arange() a použi ho v scipy.stats.nbinom.pmf()
+    rovnako pre apriornú, ale uvažuj tie pôvodné hodnoty alfa a beta, nie modifikované (nie tie, ktoré si získal po aplikovaní stĺpca Interpretation of hyperparameters)
+
+1a3) 
+    https://vioshyvo.github.io/Bayesian_inference/summarizing-the-posterior-distribution.html#credible-intervals
+    budeš potrebovať gamma.ppf()
+
+1a4) 
+    sprav odhad napríklad strednej hodnoty a mediánu z aposteriórnej pravdepodobnosti a skús nejak popísať :clueless:
+
+1a5)
+    not sure ale probably spraviť bodové odhady (stredná hodnota) z aposteriórnej prediktívnej a apriornej prediktívnej a porovnať
+
+
+1b) toto absolutne netuším či je správny postup
+    najprv si vyjadri apriornu informáciu o parametri b ... zober maximum z každej skupiny v stlpci "uloha_1 b)_prior"
+        vytvor z toho histogram a normalizuj (všetko sa normalizuje)
+    potom si musíš vybrať nejaký interval, z ktorého budeš brať hodnoty b .. napríklad linspace(0, 10, 100)
+        z neho si v cykle vytváraj nové truncated normal rozdelenie, kde dosadiš ten parameter b z toho linspace
+        pozor, pri truncnorm z scipy musíš prepočítať parametre 'a' a 'b' (na wiki je vzorec)
+        potom (v tom istom cykle) si vezmi pdf z toho rozdelenia a dosaď tam hodnoty zo stpĺca "uloha_1 b)_pozorování" - vynásob všetky výsledky medzi sebou (numpy.prod)
+            imo to musíš vynásobiť, lebo pracuješ s vektorom vstupných dát a tak sme to proste robili :)
+        výsledky si ukladaj do nejakeho array - to je tvoje likelihood - normalizuj a vykresli
+    potom už len spočítaj aposteriornu hustotu ako prior * likelihood a normalizuj
+    intervalový odhad je tentokrát nad array s diskrétnymi hodnotami nie nad pdf, takže použi cumsum a zisti indexy, pre ktoré je to ešte nie väčšie ako 0.025 a 0.975 
+    bodové odhady moc netuším, spravil som median a priemer ale neviem či správne

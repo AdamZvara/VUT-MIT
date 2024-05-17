@@ -7,3 +7,6 @@
 [submodule "SUI/proj3"]
 	path = SUI/proj3
 	url = https://github.com/AdamZvara/sui-projekt3.git
+[submodule "SUR/proj"]
+	path = SUR/proj
+	url = https://github.com/Ajchler/sur-projekt-fit.git

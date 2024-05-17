@@ -1,0 +1,11 @@
+{
+    "windowing" : "session",
+    "event_col" : "EventId",
+    "max_dist"  : 0.1,
+    "threshold" : 0.04,
+    "tf_idf"    : false,
+    "contrast"  : false,
+    
+    "session_reg" : "(blk_-?\\d+)",
+    "session_col" : "Content"
+}

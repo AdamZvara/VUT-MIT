@@ -1,0 +1,75 @@
+Architektury Výpočetních Systémů (AVS 2023)
+Projekt č. 2 (PMC)
+Login: xzvara01
+
+Úloha 1: Paralelizace původního řešení
+===============================================================================
+
+1) Kterou ze smyček (viz zadání) je vhodnější paralelizovat a co způsobuje 
+   neefektivitu paralelizaci té druhé?
+
+Vonkajšiu smyčku (vo funckii marchCubes) - ak paralelizujeme vnútornú (funkcia 
+evaluateFieldAt) tak veľkú časť algoritmu marching cubes tvorí sériová časť - 
+celé rozdelenie priestoru, vytváranie kocky, prepočítanie bodov je jediný 
+paralelný úsek. Pri vonkajšej smyčke sa paralelizuje väčšina algoritmu.
+
+2) Jaké plánování (rozdělení práce mezi vlákna) jste zvolili a proč? 
+   Jaký vliv má velikost "chunk" při dynamickém plánování (8, 16, 32, 64)?
+
+Zvolil som plánovanie dynamic a to z povahy algoritmu marching cubes - je
+zrejmé, že nie všetky iterácie vonkajšieho cyklu budú obsahovať rovnaké
+rozloženie práce (kocky na začiatku alebo konci priestoru, cez ktoré plocha 
+neprechádza skončia výpočet skôr ako tie, cez ktoré plocha prechádza). 
+Plánovanie dynmic teda predstavuje najepšiu voľbu (static nie, pretože práca 
+nie je rovnomerná a guided taktiež nie, pretože intenzica práce sa v neskorších
+iteráciach nezvyšuje). Čo sa týka veľkosti chunk pri dynamickom plánovaní tak 
+po otestovaní všetkých možností je najlepšia varianta chunksize = 32 (príliš 
+malý chunksize zvyšuje réžiu prepínania vlákien a príliš veľký naopak 
+neumožňuje lepšie rozloženie práce medzi vlákna). 
+
+3) Jakým způsobem zajišťujete ukládání trojúhelníků z několika vláken současně?
+
+Do funkcie emitTriangle vložíme kritickú sekciu pri pristupovaní do zdieľaného
+vektora mTriangles, čím zabezpečíme korektné ukladanie trojuholníkov.
+
+Úloha 2: Paralelní průchod stromem
+===============================================================================
+
+1) Stručně popište použití OpenMP tasků ve vašem řešení.
+
+2) Jaký vliv má na vaše řešení tzv. "cut-off"? Je vhodné vytvářet nový 
+   task pro každou krychli na nejnižší úrovni?
+
+3) Jakým způsobem zajišťujete ukládání trojúhelníků z několika vláken současně?
+
+Úloha 3: Grafy škálování všech řešení
+===============================================================================
+
+1) Stručně zhodnoťte efektivitu vytvořených řešení (na základě grafů ŠKÁLOVÁNÍ).
+
+2) V jakém případě (v závislosti na počtu bodů ve vstupním souboru a velikosti 
+   mřížky) bude vaše řešení 1. úlohy neefektivní? (pokud takový případ existuje)
+
+3) Je (nebo není) stromový algoritmus efektivnější z pohledu slabého škálování 
+   vzhledem ke vstupu?
+
+4) Jaký je rozdíl mezi silným a slabým škálováním?
+
+Úloha 4: Analýza využití jader pomocí VTune
+================================================================================
+
+1) Jaké bylo průměrné využití jader pro všechny tři implementace s omezením na 
+   18 vláken? Na kolik procent byly využity?
+   
+   ref:
+   loop:
+   tree:
+
+2) Jaké bylo průměrné využití jader pro všechny tři implementace s využitím 
+   všech jader? Na kolik procent se podařilo využít obě CPU?
+   
+   ref:
+   loop:
+   tree:
+
+3) Jaké jsou závěry z těchto měření?

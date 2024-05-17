@@ -1,0 +1,20 @@
+flp-run 
+    error: not enough arguments
+
+flp-run a b c 
+    error: invalid arguments
+
+flp-run -h/--help
+    okay, prints help
+
+flp-run -1/-2
+    error: not enough parameters
+
+flp-run -1 a 
+    error: not enough parameters
+
+flp-run
+flp-run
+flp-run
+flp-run
+flp-run

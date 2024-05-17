@@ -1,0 +1,541 @@
+Node: 10, 10.525
+  Node: 9, 0.585
+    Node: 10, 9.75
+      Node: 8, 3.545
+        Node: 10, 9.05
+          Node: 0, 10.75
+            Node: 3, 1.65
+              Leaf: 4
+              Node: 3, 1.85
+                Leaf: 5
+                Node: 1, 0.56
+                  Node: 1, 0.41500000000000004
+                    Leaf: 6
+                    Leaf: 5
+                  Leaf: 6
+            Leaf: 3
+          Node: 6, 8.5
+            Leaf: 4
+            Node: 5, 26.5
+              Node: 3, 4.4
+                Node: 1, 0.9724999999999999
+                  Node: 4, 0.0795
+                    Node: 1, 0.8975
+                      Node: 8, 3.245
+                        Node: 0, 8.1
+                          Leaf: 6
+                          Node: 9, 0.495
+                            Node: 2, 0.405
+                              Leaf: 6
+                              Leaf: 5
+                            Leaf: 5
+                        Node: 2, 0.235
+                          Node: 0, 8.899999999999999
+                            Node: 4, 0.0785
+                              Node: 6, 25.5
+                                Node: 0, 7.75
+                                  Node: 8, 3.335
+                                    Leaf: 6
+                                    Leaf: 5
+                                  Leaf: 7
+                                Leaf: 5
+                              Leaf: 5
+                            Leaf: 4
+                          Node: 1, 0.44999999999999996
+                            Leaf: 6
+                            Node: 0, 7.85
+                              Leaf: 5
+                              Leaf: 6
+                      Leaf: 4
+                    Node: 8, 3.3049999999999997
+                      Node: 10, 9.350000000000001
+                        Node: 0, 8.7
+                          Leaf: 5
+                          Leaf: 4
+                        Leaf: 5
+                      Node: 0, 9.05
+                        Node: 9, 0.46499999999999997
+                          Leaf: 4
+                          Node: 8, 3.3200000000000003
+                            Leaf: 4
+                            Node: 0, 7.05
+                              Node: 0, 6.65
+                                Leaf: 5
+                                Leaf: 6
+                              Leaf: 5
+                        Node: 0, 9.3
+                          Leaf: 6
+                          Leaf: 5
+                  Leaf: 3
+                Node: 0, 10.15
+                  Leaf: 6
+                  Leaf: 4
+              Leaf: 5
+        Leaf: 6
+      Node: 1, 0.5874999999999999
+        Node: 9, 0.475
+          Leaf: 5
+          Node: 2, 0.015
+            Leaf: 7
+            Node: 5, 30.5
+              Node: 0, 10.85
+                Node: 8, 3.205
+                  Leaf: 6
+                  Node: 4, 0.1025
+                    Node: 8, 3.425
+                      Node: 4, 0.0825
+                        Node: 1, 0.455
+                          Node: 3, 1.7000000000000002
+                            Leaf: 5
+                            Leaf: 6
+                          Node: 6, 33.0
+                            Node: 4, 0.069
+                              Leaf: 5
+                              Leaf: 6
+                            Leaf: 5
+                        Node: 0, 9.2
+                          Leaf: 6
+                          Leaf: 5
+                      Leaf: 4
+                    Leaf: 4
+                Node: 1, 0.315
+                  Leaf: 6
+                  Leaf: 5
+              Leaf: 5
+        Node: 9, 0.545
+          Node: 4, 0.0695
+            Node: 3, 1.5499999999999998
+              Leaf: 4
+              Node: 0, 7.9
+                Leaf: 5
+                Node: 2, 0.375
+                  Leaf: 6
+                  Leaf: 5
+            Node: 5, 3.5
+              Leaf: 3
+              Node: 2, 0.30000000000000004
+                Node: 0, 8.7
+                  Leaf: 5
+                  Node: 0, 9.0
+                    Leaf: 6
+                    Leaf: 5
+                Leaf: 5
+          Node: 6, 28.0
+            Leaf: 5
+            Node: 7, 0.99525
+              Leaf: 5
+              Node: 7, 0.9984500000000001
+                Node: 0, 7.1
+                  Leaf: 5
+                  Leaf: 6
+                Leaf: 5
+    Node: 6, 81.5
+      Node: 0, 10.850000000000001
+        Node: 10, 9.850000000000001
+          Node: 1, 0.555
+            Node: 2, 0.445
+              Node: 6, 29.0
+                Node: 6, 13.5
+                  Node: 0, 9.850000000000001
+                    Leaf: 5
+                    Leaf: 6
+                  Node: 3, 9.25
+                    Node: 1, 0.335
+                      Node: 0, 8.8
+                        Leaf: 6
+                        Leaf: 5
+                      Leaf: 6
+                    Leaf: 5
+                Node: 5, 25.0
+                  Node: 6, 61.0
+                    Node: 3, 1.75
+                      Leaf: 5
+                      Node: 9, 0.605
+                        Leaf: 6
+                        Node: 9, 0.645
+                          Node: 5, 20.5
+                            Leaf: 5
+                            Leaf: 6
+                          Node: 6, 30.5
+                            Leaf: 7
+                            Node: 5, 22.5
+                              Node: 0, 6.65
+                                Leaf: 5
+                                Leaf: 6
+                              Node: 4, 0.0875
+                                Leaf: 5
+                                Leaf: 6
+                    Leaf: 5
+                  Leaf: 6
+              Node: 7, 0.9969600000000001
+                Node: 0, 7.75
+                  Leaf: 5
+                  Leaf: 6
+                Node: 2, 0.8400000000000001
+                  Node: 10, 9.649999999999999
+                    Leaf: 5
+                    Leaf: 6
+                  Leaf: 4
+            Node: 1, 0.7875000000000001
+              Node: 4, 0.109
+                Node: 5, 11.5
+                  Node: 1, 0.635
+                    Node: 6, 64.5
+                      Node: 10, 9.55
+                        Leaf: 5
+                        Node: 1, 0.575
+                          Leaf: 6
+                          Leaf: 5
+                      Leaf: 6
+                    Node: 9, 0.72
+                      Node: 3, 1.95
+                        Node: 5, 3.5
+                          Leaf: 6
+                          Leaf: 5
+                        Node: 0, 8.3
+                          Leaf: 6
+                          Leaf: 4
+                      Node: 1, 0.6725000000000001
+                        Leaf: 5
+                        Leaf: 4
+                  Node: 7, 1.000175
+                    Node: 8, 3.1799999999999997
+                      Leaf: 6
+                      Node: 4, 0.069
+                        Node: 9, 0.745
+                          Leaf: 5
+                          Leaf: 6
+                        Leaf: 5
+                    Leaf: 6
+                Node: 9, 0.675
+                  Node: 0, 9.55
+                    Leaf: 6
+                    Leaf: 3
+                  Node: 0, 8.8
+                    Leaf: 5
+                    Node: 2, 0.435
+                      Leaf: 5
+                      Leaf: 6
+              Node: 1, 0.855
+                Leaf: 6
+                Node: 4, 0.097
+                  Leaf: 4
+                  Leaf: 5
+          Node: 1, 0.655
+            Node: 8, 3.425
+              Node: 2, 0.315
+                Node: 8, 3.415
+                  Node: 3, 3.2
+                    Node: 4, 0.0765
+                      Node: 9, 0.625
+                        Leaf: 5
+                        Leaf: 6
+                      Leaf: 6
+                    Node: 1, 0.42
+                      Leaf: 6
+                      Leaf: 5
+                  Leaf: 7
+                Node: 2, 0.325
+                  Node: 6, 56.0
+                    Leaf: 7
+                    Leaf: 5
+                  Node: 5, 14.5
+                    Node: 9, 0.635
+                      Leaf: 5
+                      Node: 1, 0.325
+                        Node: 1, 0.24
+                          Leaf: 5
+                          Leaf: 7
+                        Node: 10, 10.1
+                          Leaf: 7
+                          Leaf: 6
+                    Leaf: 6
+              Node: 1, 0.31
+                Leaf: 6
+                Node: 3, 1.75
+                  Leaf: 4
+                  Node: 2, 0.005
+                    Leaf: 6
+                    Node: 2, 0.36
+                      Leaf: 5
+                      Leaf: 5
+            Node: 2, 0.185
+              Node: 0, 6.949999999999999
+                Node: 5, 9.5
+                  Leaf: 3
+                  Leaf: 5
+                Node: 4, 0.08499999999999999
+                  Leaf: 6
+                  Node: 1, 0.79
+                    Leaf: 5
+                    Leaf: 6
+              Leaf: 5
+        Node: 0, 11.55
+          Node: 2, 0.425
+            Leaf: 5
+            Leaf: 6
+          Node: 9, 0.83
+            Node: 8, 3.0300000000000002
+              Node: 0, 12.3
+                Leaf: 7
+                Leaf: 6
+              Node: 3, 4.5
+                Node: 4, 0.096
+                  Node: 5, 29.0
+                    Leaf: 6
+                    Leaf: 5
+                  Node: 2, 0.5
+                    Leaf: 5
+                    Leaf: 6
+                Leaf: 7
+            Node: 1, 0.445
+              Leaf: 7
+              Leaf: 4
+      Node: 8, 2.935
+        Leaf: 6
+        Node: 6, 105.5
+          Node: 8, 3.295
+            Node: 0, 7.0
+              Leaf: 6
+              Node: 3, 14.600000000000001
+                Leaf: 5
+                Leaf: 6
+            Node: 4, 0.078
+              Node: 1, 0.385
+                Leaf: 4
+                Leaf: 5
+              Node: 1, 0.325
+                Leaf: 7
+                Node: 5, 13.0
+                  Leaf: 5
+                  Leaf: 6
+          Node: 3, 1.65
+            Leaf: 4
+            Leaf: 5
+  Node: 1, 0.375
+    Node: 4, 0.1105
+      Node: 2, 0.275
+        Node: 7, 0.995965
+          Leaf: 6
+          Leaf: 5
+        Node: 3, 1.55
+          Node: 2, 0.425
+            Leaf: 6
+            Leaf: 5
+          Node: 7, 0.99557
+            Node: 8, 3.335
+              Node: 5, 3.5
+                Node: 1, 0.3075
+                  Leaf: 7
+                  Leaf: 6
+                Node: 8, 2.995
+                  Leaf: 8
+                  Node: 1, 0.195
+                    Node: 0, 8.2
+                      Leaf: 5
+                      Leaf: 7
+                    Node: 8, 3.185
+                      Node: 10, 12.350000000000001
+                        Node: 0, 8.95
+                          Leaf: 7
+                          Leaf: 5
+                        Leaf: 6
+                      Node: 1, 0.355
+                        Leaf: 7
+                        Node: 1, 0.365
+                          Leaf: 8
+                          Leaf: 7
+              Node: 6, 47.0
+                Node: 9, 0.62
+                  Node: 0, 6.949999999999999
+                    Leaf: 7
+                    Leaf: 6
+                  Leaf: 7
+                Node: 3, 1.65
+                  Leaf: 5
+                  Leaf: 6
+            Node: 4, 0.086
+              Node: 0, 8.45
+                Node: 10, 11.2
+                  Leaf: 6
+                  Node: 0, 7.75
+                    Leaf: 6
+                    Node: 0, 8.05
+                      Leaf: 5
+                      Leaf: 7
+                Node: 6, 17.5
+                  Node: 3, 2.1500000000000004
+                    Leaf: 6
+                    Node: 2, 0.43
+                      Leaf: 7
+                      Node: 2, 0.605
+                        Node: 0, 10.899999999999999
+                          Leaf: 8
+                          Leaf: 7
+                        Leaf: 5
+                  Node: 2, 0.475
+                    Node: 3, 2.4000000000000004
+                      Leaf: 7
+                      Leaf: 5
+                    Node: 10, 11.1
+                      Leaf: 6
+                      Node: 9, 0.5700000000000001
+                        Leaf: 6
+                        Leaf: 7
+              Node: 5, 9.5
+                Leaf: 7
+                Leaf: 5
+      Leaf: 6
+    Node: 9, 0.585
+      Node: 5, 8.5
+        Node: 6, 10.5
+          Node: 1, 0.48000000000000004
+            Leaf: 4
+            Node: 10, 11.05
+              Leaf: 3
+              Leaf: 6
+          Node: 8, 3.365
+            Node: 8, 3.2
+              Leaf: 5
+              Node: 9, 0.575
+                Node: 0, 9.75
+                  Leaf: 6
+                  Leaf: 7
+                Leaf: 4
+            Node: 0, 5.1
+              Leaf: 4
+              Node: 7, 0.9920899999999999
+                Leaf: 6
+                Node: 2, 0.005
+                  Node: 10, 11.100000000000001
+                    Leaf: 5
+                    Node: 0, 6.1
+                      Leaf: 5
+                      Leaf: 6
+                  Leaf: 5
+        Node: 1, 1.0
+          Node: 10, 11.149999999999999
+            Node: 10, 10.850000000000001
+              Node: 1, 0.575
+                Leaf: 5
+                Leaf: 6
+              Leaf: 5
+            Node: 8, 3.4850000000000003
+              Node: 5, 9.5
+                Leaf: 7
+                Node: 1, 0.645
+                  Leaf: 6
+                  Node: 0, 6.8
+                    Leaf: 4
+                    Leaf: 6
+              Node: 7, 0.993935
+                Leaf: 5
+                Node: 0, 6.45
+                  Leaf: 6
+                  Node: 0, 6.55
+                    Leaf: 4
+                    Leaf: 7
+          Leaf: 4
+      Node: 6, 85.5
+        Node: 2, 0.505
+          Node: 9, 0.665
+            Node: 6, 47.5
+              Node: 3, 5.55
+                Node: 4, 0.099
+                  Node: 0, 6.65
+                    Node: 4, 0.0805
+                      Node: 0, 6.55
+                        Leaf: 6
+                        Node: 1, 0.5700000000000001
+                          Leaf: 7
+                          Leaf: 6
+                      Leaf: 5
+                    Leaf: 6
+                  Leaf: 5
+                Leaf: 7
+              Node: 3, 2.1500000000000004
+                Node: 1, 0.495
+                  Leaf: 7
+                  Leaf: 5
+                Node: 7, 0.99674
+                  Leaf: 6
+                  Leaf: 5
+            Node: 5, 22.0
+              Node: 8, 3.325
+                Node: 7, 0.99517
+                  Node: 2, 0.29000000000000004
+                    Leaf: 5
+                    Node: 8, 3.25
+                      Leaf: 8
+                      Leaf: 6
+                  Node: 4, 0.09
+                    Node: 8, 3.09
+                      Leaf: 5
+                      Leaf: 6
+                    Node: 5, 5.5
+                      Node: 1, 0.47
+                        Leaf: 5
+                        Leaf: 6
+                      Leaf: 5
+                Node: 1, 0.665
+                  Node: 7, 0.99714
+                    Node: 10, 11.149999999999999
+                      Node: 1, 0.515
+                        Leaf: 6
+                        Node: 5, 13.0
+                          Leaf: 5
+                          Node: 0, 6.15
+                            Leaf: 6
+                            Leaf: 4
+                      Node: 9, 0.71
+                        Node: 7, 0.99498
+                          Leaf: 6
+                          Node: 1, 0.44999999999999996
+                            Leaf: 8
+                            Leaf: 7
+                        Node: 5, 18.0
+                          Leaf: 7
+                          Leaf: 8
+                    Leaf: 7
+                  Node: 0, 6.15
+                    Leaf: 5
+                    Node: 3, 1.95
+                      Leaf: 5
+                      Leaf: 6
+              Node: 3, 5.1
+                Node: 4, 0.1195
+                  Node: 7, 0.99396
+                    Node: 0, 6.449999999999999
+                      Leaf: 6
+                      Leaf: 7
+                    Leaf: 6
+                  Leaf: 6
+                Leaf: 7
+          Node: 0, 10.55
+            Node: 3, 2.3499999999999996
+              Leaf: 6
+              Node: 0, 8.2
+                Leaf: 6
+                Leaf: 7
+            Node: 3, 2.9
+              Leaf: 6
+              Node: 7, 0.999
+                Node: 4, 0.107
+                  Node: 8, 3.1950000000000003
+                    Leaf: 6
+                    Leaf: 8
+                  Leaf: 7
+                Node: 0, 11.7
+                  Leaf: 5
+                  Node: 2, 0.775
+                    Leaf: 7
+                    Leaf: 5
+        Node: 7, 0.99305
+          Node: 0, 5.449999999999999
+            Leaf: 7
+            Leaf: 8
+          Node: 0, 8.95
+            Node: 8, 3.34
+              Leaf: 6
+              Leaf: 5
+            Leaf: 4

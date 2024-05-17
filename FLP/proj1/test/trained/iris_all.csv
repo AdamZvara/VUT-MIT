@@ -1,0 +1,5 @@
+Node: 0, 50.5
+  Leaf: Iris-setosa
+  Node: 0, 100.5
+    Leaf: Iris-versicolor
+    Leaf: Iris-virginica

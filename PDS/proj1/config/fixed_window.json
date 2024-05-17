@@ -1,0 +1,15 @@
+{
+    "windowing" : "fixed",
+    "event_col" : "EventId",
+    
+    "max_dist"  : 0.1,
+    "threshold" : 0.3,
+    "tf_idf"    : true,
+    "contrast"  : false,
+    
+    "window_size" : 1,
+    "time_col"    : "Time",
+    "time_fmt"    : "%H%M%S",
+    "date_col"    : ["Date"],
+    "date_fmt"    : "%d%m%y"
+}
