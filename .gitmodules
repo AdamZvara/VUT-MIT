@@ -1,0 +1,9 @@
+[submodule "SUI/proj1"]
+	path = SUI/proj1
+	url = https://github.com/AdamZvara/sui-freecell.git
+[submodule "SUI/proj2"]
+	path = SUI/proj2
+	url = https://github.com/AdamZvara/sui-projekt2.git
+[submodule "SUI/proj3"]
+	path = SUI/proj3
+	url = https://github.com/AdamZvara/sui-projekt3.git
