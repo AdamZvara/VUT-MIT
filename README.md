@@ -1,6 +1,5 @@
 This repository contains all projects from different courses at FIT VUT MIT NSEC
 
-### First semester
 | **Course** | **Project** | **Results** |                                 **Description**                                 |
 |:----------:|:-----------:|:-----------:|:-------------------------------------------------------------------------------:|
 |     AVS    |    proj1    |     6/10    |          Calculating Mandelbrot set with vectorization in CPP + openMP          |
@@ -15,15 +14,12 @@ This repository contains all projects from different courses at FIT VUT MIT NSEC
 |     SUI    |    proj2    |    6.75/7   |               Basic generative vs descriminative models in python               |
 |     SUI    |    proj3    |    5.75/6   |                           Regression model in pytorch                           |
 |     SCO    |    proj1    |    42/45    |                                    Bug bounty                                   |
-
-### Second semester
-| **Course** | **Project** | **Results** |                          **Description**                          |
-|:----------:|:-----------:|:-----------:|:-----------------------------------------------------------------:|
-|     FLP    |    proj1    |    12/12    |             Decision trees with gini index in haskell             |
-|     FLP    |    proj2    |     8/8     |              Solving Rubiks cube using IDS in prolog              |
-|     KRY    |    proj1    |     5/5     |  Breaking TTS (transpose-transpose-substitution) cipher in python |
-|     KRY    |    proj2    |   9.23/10   |   Implementation of SHA256, MAC and length extension attack in C  |
-|     PRL    |    proj1    |    10/10    |              Pipeline merge sort using openMPI in CPP             |
-|     PRL    |    proj2    |    10/10    |                 Game of life using openMPI in CPP                 |
-|     PDS    |    proj1    |    25/25    | Log file analysis and anomaly detection with LogCluster in python |
-|     SUR    |    proj1    |    24/25    |       Target detection from image and audio data in pytorch       |
+|            |             |             |                                                                                 |
+|     FLP    |    proj1    |    12/12    |             Decision trees with gini index in haskell                           |
+|     FLP    |    proj2    |     8/8     |              Solving Rubiks cube using IDS in prolog                            |
+|     KRY    |    proj1    |     5/5     |  Breaking TTS (transpose-transpose-substitution) cipher in python               |
+|     KRY    |    proj2    |   9.23/10   |   Implementation of SHA256, MAC and length extension attack in C                |
+|     PRL    |    proj1    |    10/10    |              Pipeline merge sort using openMPI in CPP                           |
+|     PRL    |    proj2    |    10/10    |                 Game of life using openMPI in CPP                               |
+|     PDS    |    proj1    |    25/25    | Log file analysis and anomaly detection with LogCluster in python               |
+|     SUR    |    proj1    |    24/25    |       Target detection from image and audio data in pytorch                     |
