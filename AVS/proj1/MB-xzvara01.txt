@@ -1,0 +1,41 @@
+#### Stručně odpovězte na následující otázky: ######
+
+
+1. Byla "Line" vektorizace časově efektivní? Proč?
+==============================================================================
+V porovnaní s referenčnou implementáciou bola Line vektorizácia časovo efektívnejšia z niekoľkých dôvodov
+    - využívala vektorizáciu v hlavnom cykle počítania limitov pre jednotlivé komplexné čísla
+    - výpočet bol realizovaný len do polovice "výšky" matice - druhá časť bola len prekopírovaná
+        keďže matica je symetrická podľa reálnej osy (x) 
+
+V porovnaní s batch implementáciou bola menej efektívna, keďže batch využívala urýchlenie
+vyhodnotenia koncovej podmienky pre ukončenie (hlavného) cyklu a taktiež lepší caching hodnôt.
+
+
+2. Jaká byla dosažena výkonnost v Intel Advisoru pro jednotlivé implementace 
+(v GFLOPS)?
+==============================================================================
+Pri meraní výkonnosti v programe Intel Advisor boli dosiahnuté tieto výkonnosti:
+Implementácia:          REF             LINE            BATCH
+Výkonnosť (GFLOPS):     2.21            27.34           23.71
+
+
+3. Jaká část kódu byla vektorizována v "Line" implementaci? Vyčteme tuto 
+informaci i u batch kalkulátoru?
+==============================================================================
+Okrem cyklov na inicializáciu pomocných polí na výpočet, inicializáciu výsledného poľa a 
+dopočítavanie zvyšku výslenej matice bola v line implementácií vektorizovaný najvnútornejší
+cyklus ktorý realizoval výpočet Mandelbrotovej množiny - môžeme vidieť v "Survey" časti Advisoru.
+Pri batch kalkulátore tento cyklus "nevidíme" v Advisor, pretože bol rozbalený (kvôli nízkemu
+počtu iterácií - v mojej implementácií bola veľkosť batch = 128 položiek) 
+
+
+4. Co vyčteme z Roofline modelu pro obě vektorizované implementace?
+==============================================================================
+Okrem pomocných cyklov (inicializácia a dopočítanie zvyšku) môžeme porovnať priamo výkonnosť funkcie
+na výpočet Mandelbrotovej množiny (mandelbrot()), kde v Line implementácii vidíme že sa v roofline 
+modely nachádza výrazne nižšie pod hranicou danou L2 cache s výkonnosťou 41.96 GFLOPS. V batch 
+implementácii sa táto funkcia nachádza v roofline modeli výrazne vyššie s výkonnosťou 51.34 GFLOPS - 
+čo vďaka bodom, ktoré sú spomenuté v otázke 1.
+
+
