@@ -8,10 +8,11 @@ Login: xzvara01
 1) Kterou ze smyček (viz zadání) je vhodnější paralelizovat a co způsobuje 
    neefektivitu paralelizaci té druhé?
 
-Vonkajšiu smyčku (vo funckii marchCubes) - ak paralelizujeme vnútornú (funkcia 
-evaluateFieldAt) tak veľkú časť algoritmu marching cubes tvorí sériová časť - 
-celé rozdelenie priestoru, vytváranie kocky, prepočítanie bodov je jediný 
-paralelný úsek. Pri vonkajšej smyčke sa paralelizuje väčšina algoritmu.
+Vhodnejšie je paralelizovať vonkajšiu smyčku (prechod cez mriežku v metóde marchCubes),
+pretože táto metóda je volaná na vyššej úrovni a týmto spôsobom je paralelizovaná
+väčšia časť algoritmu ako pri paralelizovaní smyčky metódy evaluateFieldAt.
+Paralelizácia "vnútornej" smyčky (evaluateFieldAt) je neefektívna taktiež
+kvôli réžii vytváraných vlákien pre každú kocku v priestore.  
 
 2) Jaké plánování (rozdělení práce mezi vlákna) jste zvolili a proč? 
    Jaký vliv má velikost "chunk" při dynamickém plánování (8, 16, 32, 64)?
@@ -20,40 +21,92 @@ Zvolil som plánovanie dynamic a to z povahy algoritmu marching cubes - je
 zrejmé, že nie všetky iterácie vonkajšieho cyklu budú obsahovať rovnaké
 rozloženie práce (kocky na začiatku alebo konci priestoru, cez ktoré plocha 
 neprechádza skončia výpočet skôr ako tie, cez ktoré plocha prechádza). 
-Plánovanie dynmic teda predstavuje najepšiu voľbu (static nie, pretože práca 
-nie je rovnomerná a guided taktiež nie, pretože intenzica práce sa v neskorších
-iteráciach nezvyšuje). Čo sa týka veľkosti chunk pri dynamickom plánovaní tak 
-po otestovaní všetkých možností je najlepšia varianta chunksize = 32 (príliš 
-malý chunksize zvyšuje réžiu prepínania vlákien a príliš veľký naopak 
-neumožňuje lepšie rozloženie práce medzi vlákna). 
+Plánovanie dynamic teda predstavuje najepšiu voľbu oproti ostatným plánovaniam. 
+
+Čo sa týka veľkosti chunk pri dynamickom plánovaní tak po otestovaní všetkých 
+možností je najlepšia varianta chunksize = 32 (aj keď rozdiely s chunksize = 64 neboli 
+veľké - každý bol lepší v určitom type úlohy). Dôvodom je, že príliš malý chunksize 
+zvyšuje réžiu prepínania vlákien a príliš veľký naopak neumožňuje lepšie rozloženie práce 
+medzi vláknami. 
 
 3) Jakým způsobem zajišťujete ukládání trojúhelníků z několika vláken současně?
 
-Do funkcie emitTriangle vložíme kritickú sekciu pri pristupovaní do zdieľaného
-vektora mTriangles, čím zabezpečíme korektné ukladanie trojuholníkov.
+Synchronizácia vlákien vzájomným vylúčením pomocou kritickej sekcie v metóde
+emitTriangle.
 
 Úloha 2: Paralelní průchod stromem
 ===============================================================================
 
 1) Stručně popište použití OpenMP tasků ve vašem řešení.
 
+Vytvorenie vlákien prebieha na najvyššej vrstve v metóde marchCubes, v ktorej sa
+spustí budovanie octree metódou buildOctree. Táto metóda je prvotne volaná z "master"
+vlákna, zaitaľ čo ostatné vlákna čakajú na bariére. Metóda buildOctree skontroluje, či 
+v aktuálne spracovávanej kocke leží plocha vykresľovaného objektu. Ďalej vykresľuje
+kocku v prípade, ak je dĺžka strany kocky dostatočne malá (cut-off). Potom sú 
+pre všetky nové "podkocky" vytvorené nové tasky, ktoré rekurízvne volajú funkciu
+buildOctree. Výsledok z tejto funkcie je počet vykreslených trojuholníkov, ktorý je
+však zdieľanou premennou a tak musí dôjsť ku synchronizácií pri jej aktualizácií 
+(atomic). Nakoniec vlákna v taskoch musia čakať, kým nie sú vypočítané všetky
+rekurzívne volania funkcie buildOctree pomocou pragmy taskwait.  
+
 2) Jaký vliv má na vaše řešení tzv. "cut-off"? Je vhodné vytvářet nový 
    task pro každou krychli na nejnižší úrovni?
 
+Cut-off je použitý v metóde buildOctree na zistenie, kedy sa má vytvoriť kocka na najnižšej 
+úrovni. Ideálna hodnota cut-off je 1. Pre cut-off > 1 získavame rýchlejší výpočet na úkor
+nižšej kvality - nie sú vytvorené všetky trojuholníky. Naopak ak cut-off < 1 tak trojúholníky
+môžu byť spočítané viackrát a výpočet trvá (zbytočne) dlhšie. Na najnižšej úrovni (dĺžka kocky
+je rovná 1) už nie je potrebné vytvárať task na jej spracovanie, keďže jej úlohou je iba 
+vytvoriť jednu kocku.
+
 3) Jakým způsobem zajišťujete ukládání trojúhelníků z několika vláken současně?
+
+Rovnako ako v predchádzajúcej úlohe.
 
 Úloha 3: Grafy škálování všech řešení
 ===============================================================================
 
 1) Stručně zhodnoťte efektivitu vytvořených řešení (na základě grafů ŠKÁLOVÁNÍ).
 
+Na grafe škálovania vzhľadom ku veľkosti mriežky je stromový algoritmus efektivnejší
+pre väčšiu veľkosť mriežky (pri malej veľkosti mriežky je efektivita cca rovnaká ako pri
+algoritme loop).
+
+Pri grafoch silného škálovania si môžeme všimnúť, že stromový algoritmus vykazuje
+lepšie výsledky ako algoritmus z úlohy 1 pre počet vlákien < 32. Pre počet vlákien
+rovný 32 má však stromový algoritmus podobné (alebo horšie) výsledky. V oboch algoritmoch
+doba potrebná na výpočet klesá v závislosti od počtu použitých vlákien (okrem prípadu 
+stromového algoritmu a počtu vlákien = 2 pre malé vstupy alebo veľkého počtu použitých
+vlákien pre oba algoritmy).
+
+Pri grafoch slabého škálovania vidíme, že prvý algoritmus škáluje lepšie z hľadiska veľkosti
+vstupu a počtu použitých vlákien než stromový algoritmus, ktorého doba výpočtu sa naopak zvyšuje.
+
 2) V jakém případě (v závislosti na počtu bodů ve vstupním souboru a velikosti 
    mřížky) bude vaše řešení 1. úlohy neefektivní? (pokud takový případ existuje)
+
+Riešenie prvej úlohy bude neefektívne v prípade, že vstupný súbor obsahuje malý
+počet bodov a zároveň je veľkosť mriežky malá. V takom prípade je práca na jedno vlákno
+veľmi malá a ku neefektivite prispieva réžia spojená s vytváraním vlákien a prepočítavaním
+indexov pre jednotlivé vlákna pri použití plánovania dynamic.
 
 3) Je (nebo není) stromový algoritmus efektivnější z pohledu slabého škálování 
    vzhledem ke vstupu?
 
+Stromový algortmus nie je efektivnejší z pohľadu slabého škálovania, keďže pri malom
+počte úloh na jednotlivé vlákna rastie doba výpočtu vzhľadom na použitý počet vlákien.
+
 4) Jaký je rozdíl mezi silným a slabým škálováním?
+
+Pri silnom škálovaní uvažujeme konštantný vstup a skúmame, aké urýchlenie dosiahneme
+pri použití rôzneho počtu vlákien. Ideál je čím vyšší počet vlákien použijeme, tým 
+(lineárne) rýchlejšie vyriešime úlohu pre daný vstup.
+
+Pri slabom škálovaní prideľujeme konštantný čas výpočtu na jedno jadro - teda cieľom
+je zmapovať akým spôsobom sa bude algoritmus chovať ak zvýšime počet použitých vlákien
+spolu s veľkosťou úlohy (lineárne). Ideál: použitie viac jadier na väčšiu úlohu bude
+konštatntný ako použitie menej jadier na menšiu úlohu.
 
 Úloha 4: Analýza využití jader pomocí VTune
 ================================================================================
@@ -61,15 +114,27 @@ vektora mTriangles, čím zabezpečíme korektné ukladanie trojuholníkov.
 1) Jaké bylo průměrné využití jader pro všechny tři implementace s omezením na 
    18 vláken? Na kolik procent byly využity?
    
-   ref:
-   loop:
-   tree:
+   ref:  2.8%
+   loop: 48.4%
+   tree: 43.3%
 
 2) Jaké bylo průměrné využití jader pro všechny tři implementace s využitím 
    všech jader? Na kolik procent se podařilo využít obě CPU?
    
-   ref:
-   loop:
-   tree:
+   ref:  2.8%
+   loop: 88.8%
+   tree: 72.2%
 
 3) Jaké jsou závěry z těchto měření?
+
+Percento využita vlákien pri referenčnom riešení je malé a nemení sa s vyšším počtom
+vlákien (celú prácu vykonáva iba jedno vlákno)
+
+Pri algoritme loop je lepšie využitie vlákien, pretože algoritmus obsahuje minimum kritických
+sekcií alebo častí kódu, kde by na seba vlákna museli čakať alebo prístupu ku zdieľanej premennej
+stráženej kritickou sekciou. Pri stromovom algoritme práve väčší počet kritických sekcií a čakaním
+na dokončenie tasku je efektivita vlákien o čosi menšia. Napriek tomu stromový algoritmus má lepšie
+časové výsledky, ktoré sú založené na povahe algoritmu (efektívne prerezávanie prázdnych kociek).
+
+Pri pridaní počtu vlákien vidíme zvýšenie efektivity (okrem referenčnej implementácie), čo je spôsobené
+menším časom potrebným na výpočet algoritmov.
