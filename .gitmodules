@@ -10,6 +10,3 @@
 [submodule "SUR/proj"]
 	path = SUR/proj
 	url = https://github.com/Ajchler/sur-projekt-fit.git
-[submodule "UPA"]
-	path = UPA
-	url = https://github.com/AdamZvara/MIT_UPA_team_projects.git
