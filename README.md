@@ -23,3 +23,9 @@ This repository contains all projects from different courses at FIT VUT MIT NSEC
 |     PRL    |    proj2    |    10/10    |                 Game of life using openMPI in CPP                               |
 |     PDS    |    proj1    |    25/25    | Log file analysis and anomaly detection with LogCluster in python               |
 |     SUR    |    proj1    |    24/25    |       Target detection from image and audio data in pytorch                     |
+|            |             |             |                                                                                 |
+|     UPA    |    proj1    |      8/8    |                       Web scraping with BeautifulSoup                           |
+|     UPA    |    proj2    |      8/8    |               Storing data in various NoSQL databases                           |
+|     UPA    |    proj3    |      8/8    |             Explorative analysis and data preparation                           |
+|     BMS    |    proj1    |    20/20    |                                 Implementation of RDS                           |
+|     BIO    |    proj1    |    21/21    |          Finger vein extraction using deterministic algorithms                  |
